@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="@string/dark_theme"
+        app:title="@string/preferences_dark_theme_title"/>
+
+    <ListPreference
+        app:key="@string/language"
+        app:title="@string/preferences_language_title"
+        app:entries="@array/languageList"
+        app:entryValues="@array/languageListData"/>
+
+    <ListPreference
+        app:key="@string/font_scale"
+        app:title="@string/preferences_font_scale_title"
+        app:entries="@array/fontScaleList"
+        app:entryValues="@array/fontScaleListData"/>
+
+    <Preference
+        app:key="@string/delete_all"
+        app:title="@string/preferences_clear_all_title"
+        app:summary="@string/preferences_delete_all_summary"/>
+
+</PreferenceScreen>
