@@ -27,7 +27,7 @@
     <string name="edit_sequence_fragment_title">Редактирование</string>
     <string name="preferences_dark_theme_title">Тёмная тема</string>
     <string name="preferences_language_title">Язык</string>
-    <string name="preferences_font_scale_title">Маштаб шрифта</string>
+    <string name="preferences_font_scale_title">Маcштаб шрифта</string>
     <string name="preferences_clear_all_title">Удалить всё</string>
     <string name="preferences_delete_all_summary">Удаление всей информации приложения</string>
     <string name="added_successfully">Успешно добавлено!</string>
