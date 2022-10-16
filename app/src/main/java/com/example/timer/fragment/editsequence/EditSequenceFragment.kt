@@ -97,14 +97,6 @@ class EditSequenceFragment : Fragment() {
             }
         }
 
-        binding.buttonChangeSound.setOnClickListener {
-            editSequenceViewModel.sequence.voice_on = !editSequenceViewModel.sequence.voice_on
-            if (editSequenceViewModel.sequence.voice_on) {
-                binding.buttonChangeSound.setText(R.string.voice_on)
-            } else {
-                binding.buttonChangeSound.setText(R.string.sound_on)
-            }
-        }
     }
 
     private fun insertDataToDatabase() {

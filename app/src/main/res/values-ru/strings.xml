@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Таймер</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="settings">Найстроки</string>
+    <string name="settings">Настрйоки</string>
     <string name="sequence_item_warm_up">Подготовка: %d с</string>
     <string name="sequence_item_workout">Работа: %d с</string>
     <string name="sequence_item_rest">Отдых: %d с</string>
@@ -50,6 +50,6 @@
     <string name="rest_title">Отдых:</string>
     <string name="cycles_title">Циклы:</string>
     <string name="cooldown_title">Завершение:</string>
-    <string name="sound_on">Включить звук</string>
+    <string name="sound_on">Звук включён</string>
     <string name="voice_on">Включить голос</string>
 </resources>

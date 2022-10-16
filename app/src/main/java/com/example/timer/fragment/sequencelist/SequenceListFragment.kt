@@ -49,13 +49,13 @@ class SequenceListFragment : Fragment() {
             val action = SequenceListFragmentDirections.actionSequenceListFragmentToEditSequenceFragment(
                 Sequence(
                     0,
-                    "New Timer",
+                    "Static title",
                     Color.WHITE,
-                    10,
-                    5,
-                    3,
-                    4,
-                    13,
+                    8,
+                    7,
+                    1,
+                    7,
+                    1,
                     false
                 ),
                 true
@@ -63,9 +63,9 @@ class SequenceListFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        sequenceListViewModel.allTimers.observe(viewLifecycleOwner, { timerList ->
+        sequenceListViewModel.allTimers.observe(viewLifecycleOwner) { timerList ->
             timerAdapter.setData(timerList)
-        })
+        }
 
 
         val sharedPrefs: SharedPreferences = requireContext().getSharedPreferences(PREFS_TIMER, Context.MODE_PRIVATE)
