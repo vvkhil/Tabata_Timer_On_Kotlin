@@ -62,28 +62,27 @@ class TimerFragment : Fragment() {
         binding.textTimerTitle.text = timerList[0].duration.toString()
 
 
-        timerViewModel.timerObserver.remainingTime.observe(viewLifecycleOwner, {
+        timerViewModel.timerObserver.remainingTime.observe(viewLifecycleOwner) {
             binding.textRemainmingTime.text = it.toString()
-        })
+        }
 
-        timerViewModel.timerObserver.title.observe(viewLifecycleOwner, {
+        timerViewModel.timerObserver.title.observe(viewLifecycleOwner) {
             binding.textTimerTitle.text = it.toString()
-        })
+        }
 
-        timerViewModel.timerObserver.timerIndex.observe(viewLifecycleOwner, {
+        timerViewModel.timerObserver.timerIndex.observe(viewLifecycleOwner) {
             timerAdapter.setSelected(it)
-        })
+        }
 
-        timerViewModel.timerObserver.status.observe(viewLifecycleOwner, {
-            if (it == TimerStatus.RUN){
+        timerViewModel.timerObserver.status.observe(viewLifecycleOwner) {
+            if (it == TimerStatus.RUN) {
                 binding.buttonPause.setImageDrawable(requireContext().getDrawable(R.drawable.ic_baseline_pause_24))
                 timerStatus = TimerStatus.RUN
-            }
-            else{
+            } else {
                 binding.buttonPause.setImageDrawable(requireContext().getDrawable(R.drawable.ic_baseline_play_arrow_24))
                 timerStatus = TimerStatus.PAUSE
             }
-        })
+        }
 
         binding.buttonPause.setOnClickListener {
             if (timerStatus == TimerStatus.RUN){

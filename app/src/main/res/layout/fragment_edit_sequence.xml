@@ -78,7 +78,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="4dp"
-                    android:text="@string/voice_on" />
+                    android:text="@string/voice_on"
+                    android:visibility="invisible" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

@@ -55,6 +55,7 @@ class EditSequenceFragment : Fragment() {
                     buttonChangeSound.setText(R.string.sound_on)
                 }
 
+                editTextTitle.addTextChangedListener { text -> title = text.toString() }
                 editTextWarmUp.addTextChangedListener { text -> warmUp = text.toString().toIntOrNull()?:0}
                 editTextWorkout.addTextChangedListener { text -> workout = text.toString().toIntOrNull()?:0 }
                 editTextRest.addTextChangedListener { text -> rest = text.toString().toIntOrNull()?:0 }
@@ -94,6 +95,17 @@ class EditSequenceFragment : Fragment() {
             }
             else {
                 insertDataToDatabase()
+            }
+            if (binding.editTextWarmUp.getText().length == 9
+                || binding.editTextWarmUp.getText().length == 9
+                || binding.editTextWorkout.getText().length == 9
+                || binding.editTextWorkout.getText().length == 9
+                || binding.editTextRest.getText().length == 9
+                || binding.editTextRest.getText().length == 9
+                || binding.editTextCooldown.getText().length == 9
+                || binding.editTextCooldown.getText().length == 9
+            ) {
+                Toast.makeText(context, "You have entered the maximum number of characters allowed!", Toast.LENGTH_SHORT).show()
             }
         }
 
